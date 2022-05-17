@@ -1,0 +1,14 @@
+{
+	"_source": [],
+	"query": {
+		"bool": {
+			"filter": [
+				{
+					"match_phrase": {
+						"trackId": "37465908"
+					}
+				}
+			]
+		}
+	}
+}

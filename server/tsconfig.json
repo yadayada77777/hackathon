@@ -1,0 +1,29 @@
+{
+	"compilerOptions": {
+		"emitDecoratorMetadata": true,
+		"outDir": "out",
+		"experimentalDecorators": true,
+		"lib": [
+			"es6",
+			"dom"
+		],
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"noImplicitAny": false,
+		"noUnusedLocals": false,
+		"pretty": true,
+		"removeComments": false,
+		"sourceMap": true,
+		"inlineSources": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"target": "es6",
+		"watch": false,
+		"allowJs": false,
+		"skipLibCheck": true,
+		"noEmitOnError": false,
+		"resolveJsonModule": true
+	},
+	"exclude": [
+        "node_modules"
+    ]
+}

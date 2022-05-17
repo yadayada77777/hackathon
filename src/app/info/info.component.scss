@@ -1,0 +1,50 @@
+@import "../app.component.scss";
+.bg{
+    background-color: $MainBackgroundColor;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    height: calc(98vh - 6.25rem);
+    .back-button{
+        font-size: 1rem;
+        padding: 0.325rem 0.7rem;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        border: 1px solid transparent;
+        // border: none;
+        background-color: #1E88E5;
+        color: #ffffff;
+        &:disabled {
+          cursor: not-allowed;
+          background-color: #448bc8;
+          opacity: 0.5;
+        }
+        &:hover{
+          background-color: #1ca8dd;; font-size: 1rem;
+          padding: 0.325rem 0.7rem;
+          border-radius: 0.25rem;
+          cursor: pointer;
+          border: 1px solid transparent;
+          // border: none;
+          color: #ffffff;
+          &:disabled {
+            cursor: not-allowed;
+            background-color: #41b2db;
+            opacity: 0.5;
+          }
+          &:hover{
+            background-color: #157699;;
+          }
+        }
+    }
+    .info-list{
+        background-color:#212529;
+        color: #ffffff;
+        padding: 1.5rem;
+        list-style: none;
+        border-radius: 0.5rem;
+        .data{
+            display: inline-block;
+            padding: 0.5rem;
+        }
+    }
+}

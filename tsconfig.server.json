@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "outDir": "dist",
+    "experimentalDecorators": true,
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noUnusedLocals": false,
+    "pretty": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "inlineSources": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "es6",
+    "watch": false,
+    "allowJs": false,
+    "skipLibCheck": true,
+    "noEmitOnError": false,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "server/*.ts",
+    "server/*/*.ts",
+    "server/*/*/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

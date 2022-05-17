@@ -1,0 +1,33 @@
+{
+	"size": 1000,
+	"_source": [],
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "bool": {
+                        "should": [
+                        ],
+                        "minimum_should_match": 1
+                    }
+                },
+                {
+                    "range": {
+                        "startTime": {
+                            "gte": "2014-09-11T12:11:59Z",
+                            "lte": "2014-09-11T14:53:13Z",
+                            "format": "strict_date_optional_time"
+                        }
+                    }
+                },
+                {
+                    "bool": {
+                        "should": [
+                        ],
+                        "minimum_should_match": 1
+                    }
+                }
+            ]
+        }
+    }
+}

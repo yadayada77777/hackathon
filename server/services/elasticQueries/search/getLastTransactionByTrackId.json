@@ -1,0 +1,21 @@
+{
+	"size": 1,
+	"sort": [
+    {
+      "time": {
+        "order": "desc"
+      }
+    }
+  ],
+	"query": {
+		"bool": {
+			"filter": [
+				{
+					"match_phrase": {
+						"trackId": "3_13073904"
+					}
+				}
+			]
+		}
+	}
+}

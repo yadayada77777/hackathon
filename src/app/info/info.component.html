@@ -1,0 +1,11 @@
+<div class="bg">
+    <h1>Info</h1>
+    
+    <ul class="info-list ">
+        <li>Name:<h5 class="data">{{selectesInfo.title}}</h5></li>
+        <li>Coments:<h5 class="data">{{selectesInfo.comments}}</h5></li>
+        <li>Date:<h5 class="data">{{selectesInfo.date | date}}</h5></li>
+        <li>Url:<h5 class="data">{{selectesInfo.url}}</h5></li>
+    </ul>
+    <button class="back-button" (click)="backToTab()"><fa-icon [icon]="faCircleArrowLeft"></fa-icon> Back</button>
+</div>

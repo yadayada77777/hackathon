@@ -1,0 +1,49 @@
+{
+  "aggs": {
+    "class_values": {
+      "terms": {
+        "field": "class.keyword"
+      }
+    }
+  },
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "geo_shape": {
+            "line": {
+              "shape": {
+                "type": "Polygon",
+                "coordinates": [[]]
+              },
+              "relation": "INTERSECTS"
+            }
+          }
+        },
+        {
+          "geo_shape": {
+            "line": {
+              "shape": {
+                "type": "Polygon",
+                "coordinates": [[]]
+              },
+              "relation": "within"
+            }
+          }
+        }
+      ],
+      "minimum_should_match": 1,
+      "must": [
+        {
+          "range": {
+            "startTime": {
+              "gte": "2010-09-11T12:11:59Z",
+              "lte": "2019-09-11T14:53:13Z",
+              "format": "strict_date_optional_time"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

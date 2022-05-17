@@ -1,0 +1,8 @@
+{
+  "query": {
+    "term": {
+      "trackId": "1_2"
+    }
+  },
+  "script": "ctx._source.isUserValid = false"
+}

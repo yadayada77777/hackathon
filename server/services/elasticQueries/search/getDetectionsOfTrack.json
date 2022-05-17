@@ -1,0 +1,29 @@
+{
+    "size": 1000,
+    "sort": [
+        {
+            "time": {
+                "order": "asc"
+            }
+        }
+    ],
+    "_source": [
+        "id",
+        "time",
+        "FrameNumber",
+        "velocity",
+        "direction",
+        "worldCoord"
+    ],
+    "query": {
+        "bool": {
+            "filter": [
+                {
+                    "match_phrase": {
+                        "trackId": "3_2533608"
+                    }
+                }
+            ]
+        }
+    }
+}

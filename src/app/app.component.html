@@ -1,0 +1,10 @@
+<div class="layout" role="main">
+  <app-nav-and-filter-bar class="nav-bar row"></app-nav-and-filter-bar>
+  <div class="row">
+    <div class="col-12">
+      <app-main-tab (clickIndex)="selectIndex($event)"  *ngIf="!hideTable" [websites]="websites"></app-main-tab>
+      <app-info  *ngIf="hideTable" [websites]="websites" [selectedIndex]="selectedIndex" (openTab)="openMainTab($event)"></app-info>
+    </div>
+  </div>
+</div>
+<!-- <router-outlet></router-outlet> -->

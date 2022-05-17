@@ -1,0 +1,28 @@
+@import "../app.component.scss";
+.bg{
+    background-color: $MainBackgroundColor;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    height: calc(98vh - 6.25rem);
+    table{
+        margin-top:2rem !important;
+    }
+}
+::ng-deep{
+    .paginate_button{
+        .page-link {
+            color: $MainColor !important;
+            pointer-events: none;
+            background-color: $DarkBackgroundColor !important;
+            border-color: $MainColor !important;
+           
+        }
+        &.active{
+            .page-link {
+                color: #ffffff !important;
+                background-color: #1E88E5 !important;
+                border-color: $MainColor !important;
+            }
+        }
+    }
+}

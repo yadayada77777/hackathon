@@ -1,0 +1,67 @@
+{
+  "appenders": {
+    "fileAppender": {
+      "type": "dateFile",
+      "filename": "/logs/SmartWatch",
+      "pattern": "-yyyy-MM-dd.log",
+      "alwaysIncludePattern": true,      
+      "maxLogSize":100000000,
+      "backups":3,
+      "compress": true,
+      "keepFileExt": true,
+      "layout": {
+        "type": "pattern",
+        "pattern": " %d %p %c %x{instanceId} %x{method} %x{correlationId} %m%n"      
+      },
+      "tokens": [
+        "instanceId",
+        "correlationId",
+        "method"
+      ]     
+    },
+    "consoleAppender": {
+      "type": "console",
+      "layout": {
+        "type": "pattern",
+        "pattern": " %[%d %p %c %x{instanceId} %x{method} %x{correlationId}%] %m%n"
+      },
+      "tokens": [
+        "instanceId",
+        "correlationId",
+        "method"
+      ]     
+    },
+    "logstashUDPAppender": {
+      "type": "logstashUDP",
+      "host": "localhost",
+      "port": "50563",
+      "tokens": [
+        "serviceName",
+        "instanceId",
+        "correlationId",
+        "method"
+      ],
+      "args": "direct"
+    },
+    "WebLogs": {
+      "type": "multiFile",
+      "base": "/logs/Clients/",
+      "property": "hostNamePerSession",
+      "extension": ".log",
+      "layout": {
+        "type": "pattern",
+        "pattern": "%m%n"        
+      }
+    }
+  },
+  "categories": {
+    "default": {
+      "appenders": ["logstashUDPAppender", "fileAppender", "consoleAppender"],
+      "level": "info"
+    },
+    "LogCentralizedMiddleware": {
+      "appenders": ["WebLogs"],
+      "level": "info"
+    }
+  }
+}

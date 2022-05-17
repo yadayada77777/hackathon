@@ -1,0 +1,16 @@
+{
+    "_source": [
+        "index"
+    ],
+    "query": {
+        "bool": {
+            "filter": [
+                {
+                    "match_phrase": {
+                        "id": "{2:5009      :50101192014:PIK_FT_4_           :0:False:0:1:+6}"
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "doc":
+    {
+      "properties": {
+        "grade": 3, 
+        "type": "Warehouse",
+        "name": "name"
+      }
+    }
+  }

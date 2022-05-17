@@ -1,0 +1,8 @@
+{
+    "script": "ctx._source.trackId='3_6'",
+    "query": {
+        "terms": {
+            "id": []
+        }
+    }
+}
