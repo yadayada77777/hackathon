@@ -9,8 +9,8 @@ import { Site } from '../app/site'
 })
 export class AppComponent {
   title = 'hackathon';
-  hideTable: boolean = false;
-  selectedIndex: number;
+  // hideTable: boolean = false;
+  //selectedIndex: number;
   websites: Site[] = []
   /*{ title: "Test1", comments: "Test test test", date: "1643985425", url: "my-url.com", advices: [] },
   { title: "Test2", comments: "Test test test", date: "1643985425", url: "my-url.com", advices: [] },
@@ -41,18 +41,42 @@ export class AppComponent {
       }
     )
   }
+  /*
+    selectIndex(index: number) {
+  
+      this.selectedIndex = index;
+      this.hideTable = true;
+    }
+    openMainTab(event: boolean) {
+      this.hideTable = !event;
+    }
+  */
+  getAllRecords(): Observable<Site[]> {
+    console.log(`getAllRecords: Entering http://localhost:3007/techCare`);
+    return this.http.get<Site[]>('http://localhost:3007/techCare');
+  }
+  hideTable: boolean = true;
+  //showInfo:boolean=false;
+  layout: string = "dashbord";
+  selectedIndex: number;
+
 
   selectIndex(index: number) {
 
     this.selectedIndex = index;
-    this.hideTable = true;
+    this.layout = 'info';
+    // this.hideTable=true;
+    // this.showInfo=false;
   }
   openMainTab(event: boolean) {
-    this.hideTable = !event;
+    // this.hideTable=!event;
+    this.layout = 'table';
   }
-
-  getAllRecords(): Observable<Site[]> {
-    console.log(`getAllRecords: Entering http://localhost:3007/techCare`);
-    return this.http.get<Site[]>('http://localhost:3007/techCare');
+  openMainDataTab(event: string) {
+    console.log(event);
+    this.layout = 'table';
+  }
+  showDashbord(event: boolean) {
+    this.layout = 'dashbord';
   }
 }

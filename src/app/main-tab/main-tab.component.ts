@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angu
 import { Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import {Site} from'../site';
-
+import { faCircleArrowLeft } from '@fortawesome/free-solid-svg-icons';//faCircleArrowLeft
 @Component({
   selector: 'app-main-tab',
   templateUrl: './main-tab.component.html',
@@ -12,6 +12,8 @@ export class MainTabComponent implements OnDestroy, OnInit {
   dtOptions: DataTables.Settings = {};
   @Output() clickIndex = new EventEmitter();
   @Input() websites:Site[];
+  @Output() openDashboard = new EventEmitter();
+  faCircleArrowLeft=faCircleArrowLeft;
   // websites: Site[] = [
   //   { title:"Test1",comments:"Test test test",date:"1111111",url:"url",advices:[]},
   //   { title:"Test2",comments:"Test test test",date:"1111111",url:"url",advices:[]},
@@ -41,5 +43,8 @@ export class MainTabComponent implements OnDestroy, OnInit {
   moreInfo(index:any){
     console.log(index);
     this.clickIndex.emit(index);
+  }
+  backToDash(){
+    this.openDashboard.emit(true);
   }
 }

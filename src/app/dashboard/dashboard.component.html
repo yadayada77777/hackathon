@@ -1,1 +1,44 @@
-<p>dashboard works!</p>
+<div class="row">
+    <div class="col-6">
+        <div class="bg">
+            <h1>Threats</h1> 
+            <div id="chart">
+                <apx-chart class="apx-chart"
+                  [series]="chartOptions.series"
+                  [chart]="chartOptions.chart"
+                  [plotOptions]="chartOptions.plotOptions"
+                  [labels]="chartOptions.labels"
+                  [legend]="chartOptions.legend"
+                  [stroke]="chartOptions.stroke"
+                  [colors]="chartOptions.colors"
+                ></apx-chart>
+              </div>
+              <div class="buttons-block2">
+                  <button class="high" (click)="showDataInTab('high')">{{mainData.high_alert}}</button>
+                  <button class="medium"(click)="showDataInTab('medium')">{{mainData.medium_alert}}</button>
+                  <button class="low"(click)="showDataInTab('low')">{{mainData.low_alert}}</button>
+              </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="bg">
+            <h1>Categories</h1>
+            <div id="chart2">
+                <apx-chart class="apx-chart"
+                  [series]="chartOptions2.series"
+                  [chart]="chartOptions2.chart"
+                  [plotOptions]="chartOptions2.plotOptions"
+                  [labels]="chartOptions2.labels"
+                  [legend]="chartOptions2.legend"
+                  [stroke]="chartOptions2.stroke"
+                  [colors]="chartOptions2.colors"
+                ></apx-chart>
+              </div>
+              <div class="buttons-block2">
+                <button class="cat1" (click)="showDataInTab('cat1')">{{mainData.category1}}</button>
+                <button class="cat2" (click)="showDataInTab('cat2')">{{mainData.category2}}</button>
+                <button class="cat3" (click)="showDataInTab('cat3')">{{mainData.category3}}</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -6,6 +6,10 @@
         <li>Coments:<h5 class="data">{{selectesInfo.comments}}</h5></li>
         <li>Date:<h5 class="data">{{selectesInfo.date | date}}</h5></li>
         <li>Url:<h5 class="data">{{selectesInfo.url}}</h5></li>
+        <li *ngFor="let advice of selectesInfo.advices">advices:
+            <h5 class="data">{{advice}}</h5>
+        </li>
+       
     </ul>
     <button class="back-button" (click)="backToTab()"><fa-icon [icon]="faCircleArrowLeft"></fa-icon> Back</button>
 </div>

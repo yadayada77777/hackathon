@@ -1,0 +1,70 @@
+@import "../app.component.scss";
+.bg{
+    background-color: #383838;
+    border-radius: 0.5rem;
+   // padding: 1.5rem;
+    height: calc(98vh - 6.25rem);
+    display: grid;
+    grid-template-columns: 1fr 60% 1fr;
+    grid-template-rows: 10% 1fr 1fr;
+    h1{
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 1;
+        grid-row-end: span 1; 
+        background-color: $MainBackgroundColor;
+       padding: 1.5rem;
+       border-radius: 0.5rem 0.5rem 0 0;
+
+    }
+    #chart, #chart2{
+        grid-column-start: 2;
+        grid-column-end: span 1;
+        grid-row-start: 2;
+        grid-row-end: span 1;  
+        background-color: #383838; 
+        padding: 2rem; 
+        border-radius: 0.5rem;
+    }
+    .buttons-block2{
+        grid-column-start: 2;
+        grid-column-end: span 1;
+        grid-row-start: 3;
+        grid-row-end: span 1;
+        display: flex;
+        justify-content: space-around;
+       
+        button{
+            width: 5rem;
+            flex: 0 0 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            border: none;
+            color: #fff;
+            padding: 0.5rem;
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-shadow: 1px 1px 3px rgba(0,0,0, 0.5);
+        }
+        //"#C62828", "#FF5722", "#FFC107"
+        .high{
+          background-color:#C62828;  
+        }
+        .medium{
+            background-color:#FF5722;
+        }
+        .low{
+            background-color:#FFC107;
+        }
+        //"#1E88E5", "#00ACC1", "#7CB342"
+        .cat1{
+            background-color:#1E88E5;
+        }
+        .cat2{
+            background-color:#00ACC1;
+        }
+        .cat3{
+            background-color:#7CB342;
+        }
+    }
+}

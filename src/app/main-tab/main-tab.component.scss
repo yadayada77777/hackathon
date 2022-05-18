@@ -7,6 +7,38 @@
     table{
         margin-top:2rem !important;
     }
+    .back-button{
+        font-size: 1rem;
+        padding: 0.325rem 0.7rem;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        border: 1px solid transparent;
+        // border: none;
+        background-color: #1E88E5;
+        color: #ffffff;
+        &:disabled {
+          cursor: not-allowed;
+          background-color: #448bc8;
+          opacity: 0.5;
+        }
+        &:hover{
+          background-color: #1ca8dd;; font-size: 1rem;
+          padding: 0.325rem 0.7rem;
+          border-radius: 0.25rem;
+          cursor: pointer;
+          border: 1px solid transparent;
+          // border: none;
+          color: #ffffff;
+          &:disabled {
+            cursor: not-allowed;
+            background-color: #41b2db;
+            opacity: 0.5;
+          }
+          &:hover{
+            background-color: #157699;;
+          }
+        }
+    }
 }
 ::ng-deep{
     .paginate_button{
